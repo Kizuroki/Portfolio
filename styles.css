@@ -1,0 +1,144 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Queens Park';
+    color: #EAEAEA; /* Light gray text */
+    background: #cdcab7; /* Dark spacey background */
+    background-size: cover;
+    background-position: center;
+}
+
+header {
+    text-align: center;
+    padding: 100px 0;
+    position: relative; /* To position elements inside */
+}
+
+header h1 {
+    font-size: 4rem;
+    position: relative;
+    z-index: 1; /* Place it above the black box */
+    color: #cdcab7; /* Same color as the background */
+    background-color: black;
+    display: inline-block;
+    padding: 10px 300px;
+    letter-spacing: 5px; /* Adds a vintage newspaper feel */
+}
+
+
+
+
+header h1::before, header h1::after {
+    position: absolute;
+    width: 160px;
+    height: 60px;
+    border: 2px solid #cdcab7;
+    transform: translateY(-50%);
+    align-items: center;
+    font-family: 'Queens Park';
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    color: #cdcab7;
+    top: 13%;
+    background-color: #000000; /* Background matching body for box */
+}
+
+header h1::before {
+    display: flex;
+    transform: translateX(135%);
+    content: 'LATEST SPECIAL';
+    left: -200px; /* Position the box to the left of the name */
+}
+
+header h1::after {
+    display: flex;
+    transform: translateX(-135%);
+    content: 'DAILY REPORT';
+    right: -200px; /* Position the box to the right of the name */
+}
+
+/* Header lines styling */
+.header-lines1{
+    justify-content: center; /* Center the lines */
+    margin: 20px 0; /* Adjust this margin for spacing */
+}
+
+
+.header-lines1 div{
+    height: 1px; /* Height of the lines */
+    background-color: #000000; /* Color of the lines */
+}
+
+.header-info {
+    font-size: 1.2rem;
+    color: #000000;
+    letter-spacing: 2px;
+    white-space: nowrap; /* Keeps all text on one line */
+    margin: 10px 0; /* Space above and below the content */
+}
+
+
+
+h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #000000; /* Light purple */
+}
+
+#about .lined-box {
+    right: 00px;
+    width: 500px; 
+    height: 500px;        /* Adjust the height as needed */
+    border: 2px solid #000000; /* Black-lined box */
+    margin-right: 20px;       /* Space between the box and the text */
+    background-color: transparent; /* Keep it empty */
+}
+
+#about {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding-left: 140px;
+    padding-right: 140px;
+}
+
+#about .about-text {
+    width: 80%;
+}
+
+#about p {
+    font-family: 'Queens Park';
+    text-align: center;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #000000;
+    text-align: left;
+}
+
+
+.project {
+    width: 30%;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+
+#contact p {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #EAEAEA;
+}
+
+footer {
+    font-family: 'Sector Seven';
+    background: rgba(13, 12, 29);
+    padding: 20px 0;
+    text-align: center;
+    color: #EAEAEA;
+}
