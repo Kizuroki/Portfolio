@@ -7,7 +7,7 @@
 
 body {
     font-family: 'Queens Park';
-    color: #EAEAEA; /* Light gray text */
+    color: #f1eaea; /* Light gray text */
     background: #cdcab7; /* Dark spacey background */
     background-size: cover;
     background-position: center;
@@ -15,7 +15,7 @@ body {
 
 header {
     text-align: center;
-    padding: 100px 0;
+    padding: 50px 0;
     position: relative; /* To position elements inside */
 }
 
@@ -64,6 +64,7 @@ header h1::after {
 
 /* Header lines styling */
 .header-lines1{
+    padding-top: 2px;
     justify-content: center; /* Center the lines */
     margin: 20px 0; /* Adjust this margin for spacing */
 }
@@ -85,14 +86,13 @@ header h1::after {
 
 
 h2 {
-    text-align: center;
-    font-size: 2.5rem;
+    text-align: left;
+    font-size: 2rem;
     margin-bottom: 20px;
-    color: #000000; /* Light purple */
+    color: #cdcab7; /* Light purple */
 }
 
 #about .lined-box {
-    right: 00px;
     width: 500px; 
     height: 500px;        /* Adjust the height as needed */
     border: 2px solid #000000; /* Black-lined box */
@@ -100,17 +100,31 @@ h2 {
     background-color: transparent; /* Keep it empty */
 }
 
+
+
 #about {
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
-    padding-left: 140px;
-    padding-right: 140px;
+    padding-left: 90px;
+    padding-right: 300px;
 }
 
-#about .about-text {
-    width: 80%;
+
+.about-text {
+    width: 60%;
+    display: grid;
+    grid-template-columns: repeat(3, 17rem);
+    gap: 20px;
 }
+
+.column-header {
+    background-color: #000000;
+    padding: 10px;
+    height: 50px;
+
+}
+
 
 #about p {
     font-family: 'Queens Park';
