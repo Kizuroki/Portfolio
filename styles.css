@@ -15,7 +15,7 @@ body {
 
 header {
     text-align: center;
-    padding: 50px 0;
+    padding: 15px 0;
     position: relative; /* To position elements inside */
 }
 
@@ -93,11 +93,18 @@ h2 {
 }
 
 #about .lined-box {
-    width: 500px; 
-    height: 500px;        /* Adjust the height as needed */
+    width: 390px; 
+    height: 480px;        /* Adjust the height as needed */
     border: 2px solid #000000; /* Black-lined box */
     margin-right: 20px;       /* Space between the box and the text */
     background-color: transparent; /* Keep it empty */
+}
+
+#about .lined-box img {
+    max-width: 386px;
+    max-height: 493px;
+
+    object-fit: cover; /* Scale the image to cover the box without distortion */
 }
 
 
@@ -150,7 +157,7 @@ h2 {
 }
 
 footer {
-    font-family: 'Sector Seven';
+    font-family: 'Times New Roman';
     background: rgba(13, 12, 29);
     padding: 20px 0;
     text-align: center;
