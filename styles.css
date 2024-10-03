@@ -132,10 +132,7 @@ h2 {
 
 
 #about p {
-    border: 2px solid rgb(35, 35, 35); /* Black-lined box */
-    height: 417.5px;
-    width: 260px;
-    padding: 5px;
+    
     margin-right: 20px;       /* Space between the box and the text */
     background-color: transparent; /* Keep it empty */
     font-family: 'Queens Park';
