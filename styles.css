@@ -7,8 +7,9 @@
 
 body {
     font-family: 'Queens Park';
-    color: #f1eaea; /* Light gray text */
-    background: #cdcab7; /* Dark spacey background */
+    color: #f1eaea;
+    background: #cdcab7;
+    background-blend-mode: multiply;
     background-size: cover;
     background-position: center;
 }
@@ -23,8 +24,9 @@ header h1 {
     font-size: 4rem;
     position: relative;
     z-index: 1; /* Place it above the black box */
-    color: #cdcab7; /* Same color as the background */
-    background-color: black;
+    color: #c1beac; /* Same color as the background */
+    background-color: rgb(35, 35, 35);
+    
     display: inline-block;
     padding: 10px 300px;
     letter-spacing: 5px; /* Adds a vintage newspaper feel */
@@ -43,9 +45,9 @@ header h1::before, header h1::after {
     font-family: 'Queens Park';
     font-size: 1.2rem;
     letter-spacing: 2px;
-    color: #cdcab7;
+    color: #c1beac;;
     top: 13%;
-    background-color: #000000; /* Background matching body for box */
+    background-color:rgb(35, 35, 35);; /* Background matching body for box */
 }
 
 header h1::before {
@@ -58,7 +60,7 @@ header h1::before {
 header h1::after {
     display: flex;
     transform: translateX(-135%);
-    content: 'DAILY REPORT';
+    content: 'DAYTIME EDITION';
     right: -200px; /* Position the box to the right of the name */
 }
 
@@ -72,17 +74,16 @@ header h1::after {
 
 .header-lines1 div{
     height: 1px; /* Height of the lines */
-    background-color: #000000; /* Color of the lines */
+    background-color: rgb(35, 35, 35);
 }
 
 .header-info {
     font-size: 1.2rem;
-    color: #000000;
+    color: rgb(35, 35, 35);
     letter-spacing: 2px;
     white-space: nowrap; /* Keeps all text on one line */
     margin: 10px 0; /* Space above and below the content */
 }
-
 
 
 h2 {
@@ -95,7 +96,7 @@ h2 {
 #about .lined-box {
     width: 390px; 
     height: 480px;        /* Adjust the height as needed */
-    border: 2px solid #000000; /* Black-lined box */
+    border: 2px solid rgb(35, 35, 35);; /* Black-lined box */
     margin-right: 20px;       /* Space between the box and the text */
     background-color: transparent; /* Keep it empty */
 }
@@ -103,18 +104,16 @@ h2 {
 #about .lined-box img {
     max-width: 386px;
     max-height: 493px;
-
+    filter: brightness(0.8) contrast(1.1) sepia(0.2);
     object-fit: cover; /* Scale the image to cover the box without distortion */
 }
 
 
-
 #about {
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    padding-left: 90px;
-    padding-right: 300px;
+    display: flex; /* Use flexbox to align items */
+    align-items: flex-start; /* Align items at the start */
+    justify-content: center; /* Center content horizontally */
+    padding: 20px 0; /* Add padding for spacing */
 }
 
 
@@ -126,20 +125,61 @@ h2 {
 }
 
 .column-header {
-    background-color: #000000;
+    background-color: rgb(35, 35, 35);;
     padding: 10px;
     height: 50px;
-
 }
 
 
 #about p {
+    border: 2px solid rgb(35, 35, 35); /* Black-lined box */
+    height: 417.5px;
+    width: 260px;
+    padding: 5px;
+    margin-right: 20px;       /* Space between the box and the text */
+    background-color: transparent; /* Keep it empty */
     font-family: 'Queens Park';
     text-align: center;
-    font-size: 1.2rem;
-    line-height: 1.6;
-    color: #000000;
+    font-size: 1.45rem;
+    line-height: 1.2;
+    color:rgb(35, 35, 35);
     text-align: left;
+}
+
+/*SKILLS SECTION*/
+
+#skills {
+    display: flex;
+    flex-direction: column; /* Arrange items in a column */
+    padding: 20px; /* Add padding for spacing */
+    margin: 0 auto; /* Center the section */
+    max-width: 800px; /* Limit width for readability */
+    color:rgb(35, 35, 35);
+}
+
+.skills-header {
+    text-align: left; /* Align header to the left */
+    margin-bottom: 20px; /* Space below the header */
+}
+
+.skills-content {
+    display: flex; /* Create a flex container */
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    gap: 20px; /* Space between skill items */
+}
+
+.skill-item {
+    flex: 1 1 30%; /* Allow items to grow and shrink */
+    border: 2px solid rgb(35, 35, 35); /* Border for a boxed effect */
+    padding: 15px; /* Padding inside each skill box */
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent background */
+    color: rgb(35, 35, 35); /* Text color matching the overall theme */
+    font-family: 'Queens Park'; /* Keep the font consistent */
+}
+
+.skill-item h5 {
+    margin-bottom: 10px; /* Space below skill title */
+    color: #cdcab7; /* Adjust color for headings */
 }
 
 
@@ -158,7 +198,7 @@ h2 {
 
 footer {
     font-family: 'Times New Roman';
-    background: rgba(13, 12, 29);
+    background: rgb(13, 12, 29);
     padding: 20px 0;
     text-align: center;
     color: #EAEAEA;
