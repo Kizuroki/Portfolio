@@ -202,6 +202,34 @@ h2 {
     position: relative; /* Ensure it's not affected by the right box */
 }
 
+.header-box2 {
+    height: 60px;
+    margin-top: 20px; /* Space between the header and text box */;
+    margin-left: 80px;
+    width: 90%; /* Adjust width as needed */
+    background-color: rgb(35, 35, 35); /* Black background */
+    color: #f1eaea; /* Light text color */
+    text-align: center; /* Center-align text */
+    padding: 15px; /* Add padding inside the box */
+    font-family: 'Queens Park', sans-serif; /* Use the same font */
+    font-size: 1.8rem; /* Adjust font size */
+    border: 2px solid #cdcab7; /* Optional border for emphasis */
+}
+
+.dark-mode .header-box2 {
+    height: 60px;
+    margin-top: 20px; /* Space between the header and text box */;
+    margin-left: 80px;
+    width: 90%; /* Adjust width as needed */
+    background-color: #888992; /* Black background */
+    color: #f1eaea; /* Light text color */
+    text-align: center; /* Center-align text */
+    padding: 15px; /* Add padding inside the box */
+    font-family: 'Queens Park', sans-serif; /* Use the same font */
+    font-size: 1.8rem; /* Adjust font size */
+    border: 2px solid#888992;; /* Optional border for emphasis */
+}
+
 /* Image box */
 .image-box {
     margin-top: 20px; /* Space between the text and image */
