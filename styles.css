@@ -182,6 +182,10 @@ h2 {
     border: 2px solid #cdcab7; /* Optional border for emphasis */
 }
 
+.dark-mode .header-box {
+    border: #888992;
+}
+
 /* Text box */
 .text-box {
     margin-top: 20px; /* Space between the header and text box */
@@ -223,7 +227,7 @@ h2 {
 
 .contact-box {
     margin-left: 80px;
-    width: 50%; /* Adjust width as needed */
+    width: 90%; /* Adjust width as needed */
     height: 60px;
     background-color: rgb(35, 35, 35); /* Black background */
     color: #f1eaea; /* Light text color */
@@ -238,6 +242,10 @@ h2 {
 .dark-mode {
     background-color: rgb(35, 35, 35);
     color:#888992
+}
+
+.dark-mode .contact-box {
+    border: #888992;
 }
 
 .dark-mode .column-header {
@@ -318,6 +326,13 @@ h2 {
     color: rgb(35, 35, 35);
 }
 
+#projects .project-image {
+    transition: transform 0.3s ease; /* Smooth transition */
+}
+
+#projects .project-image:hover {
+    transform: scale(1.1); /* Slight zoom-in effect */
+}
 
 
 
@@ -342,6 +357,8 @@ h2 {
 
 #envelope:hover {
     background: url('images/opene.PNG') no-repeat center;
+    transition: transform 0.3s ease; /* Smooth transition */
+    transform: scale(1.1);
 }
 
 #envelope.active {
@@ -365,6 +382,9 @@ h2 {
 
 #phone:hover {
     background: url('images/onp.PNG') no-repeat center;
+    transition: transform 0.3s ease; /* Smooth transition */
+    transform: scale(1.1);
+
 }
 
 #phone.active {
@@ -378,6 +398,7 @@ h2 {
 
 .dark-mode #contact {
     border: #888992;
+
 }
 
 #contact-types {
@@ -385,6 +406,7 @@ h2 {
     justify-content: center;
     margin-top: 20px;
 }
+
 
 footer {
     font-family: 'Times New Roman';
