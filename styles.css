@@ -47,21 +47,45 @@ header h1::before, header h1::after {
     letter-spacing: 2px;
     color: #c1beac;;
     top: 13%;
-    background-color:rgb(35, 35, 35);; /* Background matching body for box */
+    background-color:rgb(35, 35, 35); /* Background matching body for box */
 }
 
 header h1::before {
     display: flex;
     transform: translateX(135%);
     content: 'LATEST SPECIAL';
+    color: #cdcab7;
     left: -200px; /* Position the box to the left of the name */
 }
 
+.dark-mode header h1::before {
+    background-color:  rgb(35, 35, 35);
+    color: #888992;
+    border:  rgb(35, 35, 35);
+}
+
+.dark-mode header h1::after {
+    background-color:  rgb(35, 35, 35);
+    color: #888992;
+    border:  rgb(35, 35, 35);
+}
+
+/* Default edition */
 header h1::after {
     display: flex;
     transform: translateX(-135%);
-    content: 'DAYTIME EDITION';
+    content: attr(data-edition); /* Use attribute value */
     right: -200px; /* Position the box to the right of the name */
+}
+
+/* Update body attribute for dynamic edition */
+body[data-edition="NIGHTTIME EDITION"] header h1::after {
+    content: 'NIGHTTIME EDITION';
+}
+
+body[data-edition="DAYTIME EDITION"] header h1::after {
+    content: 'DAYTIME EDITION';
+
 }
 
 /* Header lines styling */
@@ -143,54 +167,223 @@ h2 {
     text-align: left;
 }
 
-/*SKILLS SECTION*/
+/* Header box */
+.header-box {
+    height: 60px;
 
-#skills {
-    display: flex;
-    flex-direction: column; /* Arrange items in a column */
-    padding: 20px; /* Add padding for spacing */
-    margin: 0 auto; /* Center the section */
-    max-width: 800px; /* Limit width for readability */
-    color:rgb(35, 35, 35);
+    margin-left: 80px;
+    width: 90%; /* Adjust width as needed */
+    background-color: rgb(35, 35, 35); /* Black background */
+    color: #f1eaea; /* Light text color */
+    text-align: center; /* Center-align text */
+    padding: 15px; /* Add padding inside the box */
+    font-family: 'Queens Park', sans-serif; /* Use the same font */
+    font-size: 1.8rem; /* Adjust font size */
+    border: 2px solid #cdcab7; /* Optional border for emphasis */
 }
 
-.skills-header {
-    text-align: left; /* Align header to the left */
-    margin-bottom: 20px; /* Space below the header */
+/* Text box */
+.text-box {
+    margin-top: 20px; /* Space between the header and text box */
+    margin-left: 80px;
+
+    width: 90%; /* Adjust width */
+    padding: 20px;
+    border: 2px solid rgb(35, 35, 35); /* Black outline */
+    background-color: transparent;
+    font-family: 'Queens Park', sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: rgb(35, 35, 35);
+    position: relative; /* Ensure it's not affected by the right box */
 }
 
-.skills-content {
-    display: flex; /* Create a flex container */
-    flex-wrap: wrap; /* Allow items to wrap to the next line */
-    gap: 20px; /* Space between skill items */
+/* Image box */
+.image-box {
+    margin-top: 20px; /* Space between the text and image */
+    margin-left: 80px;
+    width: 90%; /* Adjust width */
+    padding: 20px;
+    border: 2px solid rgb(35, 35, 35); /* Black outline */
+    background-color: transparent;
+    font-family: 'Queens Park', sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: rgb(35, 35, 35);
+    position: relative; /* Ensure it's not affected by the right box */
 }
 
-.skill-item {
-    flex: 1 1 30%; /* Allow items to grow and shrink */
-    border: 2px solid rgb(35, 35, 35); /* Border for a boxed effect */
-    padding: 15px; /* Padding inside each skill box */
-    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent background */
-    color: rgb(35, 35, 35); /* Text color matching the overall theme */
-    font-family: 'Queens Park'; /* Keep the font consistent */
-}
-
-.skill-item h5 {
-    margin-bottom: 10px; /* Space below skill title */
-    color: #cdcab7; /* Adjust color for headings */
-}
-
-
-.project {
-    width: 30%;
-    margin-bottom: 20px;
+.project-header {
+    color: rgb(35, 35, 35);
+    margin-top: 20px;
     text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
 }
+
+.contact-box {
+    margin-left: 80px;
+    width: 50%; /* Adjust width as needed */
+    height: 60px;
+    background-color: rgb(35, 35, 35); /* Black background */
+    color: #f1eaea; /* Light text color */
+    text-align: center; /* Center-align text */
+    padding: 15px; /* Add padding inside the box */
+    font-family: 'Queens Park', sans-serif; /* Use the same font */
+    font-size: 1.8rem; /* Adjust font size */
+    border: 2px solid #cdcab7; /* Optional border for emphasis */
+}
+
+/* Dark mode styles */
+.dark-mode {
+    background-color: rgb(35, 35, 35);
+    color:#888992
+}
+
+.dark-mode .column-header {
+    background-color:#888992;
+}
+
+.dark-mode h2 {
+    color: rgb(35, 35, 35);
+}
+
+
+.dark-mode header {
+    background-color: rgb(35, 35, 35);
+}
+
+.dark-mode header h1 {
+    color: rgb(35, 35, 35);
+    background-color: #888992;
+}
+
+.dark-mode .header-lines1 div {
+    background-color:#888992
+}
+
+.dark-mode p, .dark-mode h4 {
+    color: #888992
+}
+
+.dark-mode #about .lined-box {
+    border-color: #888992
+}
+
+.dark-mode #about p {
+    color: #888992
+}
+
+.dark-mode #skills {
+    color: #888992
+}
+
+.dark-mode #projects {
+    color: #888992
+}
+
+.dark-mode footer {
+    background: rgb(35, 35, 35);
+    color: #888992
+}
+.dark-mode .contact-box {
+    background-color: #888992
+}
+
+.dark-mode .header-box {
+    background-color: #888992
+}
+
+
+
+.dark-mode .text-box {
+    border-color: #888992
+}
+
+.dark-mode .image-box {
+    border-color: #888992
+}
+
+.dark-mode .project-header {
+    color: #888992
+}
+
+
+#projects {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Add space between items */
+    gap: 0px; /* Optional: control spacing between items */
+    padding-left: 150px; /* Add padding around the section */
+    padding-right: 150px; /* Add padding around the section */
+    color: rgb(35, 35, 35);
+}
+
+
 
 
 #contact p {
     text-align: center;
     font-size: 1.2rem;
     color: #EAEAEA;
+}
+
+#envelope {
+    cursor: pointer; /* Make sure pointer is shown */
+    width: 300px; /* Adjust width as needed */
+    height: 300px; /* Maintain aspect ratio */
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: opacity 1s; /* Smooth transition for opacity change */
+    background: url('images/closede.PNG') no-repeat center;
+    border: none;
+    margin-left: 60px;
+}
+
+#envelope:hover {
+    background: url('images/opene.PNG') no-repeat center;
+}
+
+#envelope.active {
+    background: url('images/closede.PNG') no-repeat center;
+}
+
+#phone {
+    cursor: pointer; /* Make sure pointer is shown */
+    width: 300px; /* Adjust width as needed */
+    height: 300px; /* Maintain aspect ratio */
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: opacity 1s; /* Smooth transition for opacity change */
+    background: url('images/off.PNG') no-repeat center;
+    border: none;
+    top: 0px;
+    right: 0px;
+    margin-left: 60px;
+}
+
+#phone:hover {
+    background: url('images/onp.PNG') no-repeat center;
+}
+
+#phone.active {
+    background: url('images/off.PNG') no-repeat center;
+}
+
+#contact {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.dark-mode #contact {
+    border: #888992;
+}
+
+#contact-types {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
 }
 
 footer {

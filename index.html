@@ -7,9 +7,12 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+    <body data-edition="DAYTIME EDITION">
+
     <header>
         <div class="container">
-            <h1>ISABEL R✹DRIGUEZ</h1>
+            <h1>ISABEL R<span id="toggle-dark-mode">✹</span>DRIGUEZ</h1>
             <div class="header-lines1">
                 <div></div> <!-- First line -->
                 <p class="header-info"><i>── .✦༺&nbsp;&nbsp;&nbsp;Issue No 1. &nbsp;&nbsp;&nbsp; Digital Artist | Creative Designer &nbsp;&nbsp;&nbsp; 5¢&nbsp;&nbsp;&nbsp;༻✦.──</i></p>
@@ -20,8 +23,9 @@
 
     <section id="about">
         <div class="lined-box">
-            <img src="images/me.jpg" alt="Isabel Rodriguez Art" />
+            <img src="images/uh.jpg" alt="Isabel Rodriguez Art" />
         </div> <!-- Black-lined empty box -->
+
 
         <div class="about-text">
             <div class="column-header">
@@ -45,26 +49,82 @@
         </div>
     </section>
 
-    <section id = "skills">
-        <div class="skills-header">
-            <h4><i>Data Meets Design: Isabel Rodriguez's Computational Media Experience</i></h4>
-            <div class="skills-content">Isabel Rodriguez is all about blending data and design in her work in Computational Media. With a knack for creating visually appealing websites and digital projects, she turns complex information into user-friendly experiences.</div>
+    <div class="header-text-container">
+        <div class="header-box">
+            <h2>Data Meets Design</h2>
         </div>
-        <div class="skills-header"></div>
-            <h4><i>Tech Skills</i></h4>
-            <div class="skills-content">With a diverse skillset in various programming languages such as Python, Java, HTML, CSS, and JavaScript, she can develop both the front-end and back-end of websites, creating functional and visually appealing digital experiences.</div>
+        <div class="text-box">
+            <p>Isabel Rodriguez is all about blending data and design in her work in Computational Media. With a knack for creating visually appealing websites and digital projects, she turns complex information into user-friendly experiences.</p>
         </div>
-        <div class="skills-header"></div>
-            <h4><i>Creative Solutions</i></h4>
-            <div class="skills-content"> With a creative approach to challenges, Isabel enjoys finding solutions that balance functionality and aesthetics. Whether designing a layout or optimizing performance, she is dedicated to delivering high-quality results.</div>
+        <div class="image-box">
+            <p> While still building proficiency in various programming languages, Isabel has a solid understanding of Python, Java, JavaScript, HTML, and CSS. With a growing passion for coding, she's continually expanding their skills in these areas. In addition to programming, she leverages tools like GitHub for version control and A-Frame for creating immersive web experiences, positioning herself as a versatile tech enthusiast eager to tackle new challenges.</p>
         </div>
-    </section>
+    </div>
 
+    <div class="header-lines1">
+        <div></div> <!-- First line -->
+    </div>
+
+    <div class="project-header">
+        <h1 style="letter-spacing: 60px;">Projects</h1>
+    </div>
+
+    <div class="header-lines1">
+        <div></div> <!-- First line -->
+    </div>
+
+    <div id="projects">
+        <div class="project-item">
+            <a href="https://neha0223.github.io/Speculative_Design_2700/web/mygame/index.html" target="_blank" class="project-link">
+                <img src="images/openeye.PNG" alt="Project 1" class="project-image">
+            </a>
+            <p class="project-description">Project 1: Future Beauty - A Visual Novel.
+            </p>
+        </div>
+        <div class="project-item">
+            <a href="https://isaiahphilip.github.io/BlackJackChatBot/" target="_blank" class="project-link">
+                <img src="images/card.PNG"Project 2" class="project-image">
+            </a>
+            <p class="project-description">Project 2: A BlackJack chatbot</p>
+        </div>
+        <div class="project-item">
+            <a href="https://kizuroki.github.io/" target="_blank" class="project-link">
+                <img src="images/artgal.PNG" alt="Project 3" class="project-image">
+            </a>
+            <p class="project-description">Project 3: My Art Portfolio Website!</p>
+        </div>
+    </div>
+
+</section>
+
+    <div class="header-lines1">
+        <div></div> <!-- First line -->
+    </div>
+
+    <div class="contact-box">
+        <h2>Contact</h2>
+    </div>
+    
+    <!-- button to get email -->
+
+    <div id="contact-types">
+         <div id="contact-envelope">
+            <button id="envelope" onclick="toggleNav()"></button>
+        </div>
+        <div id="contact-phoneNum">
+            <button id="phone" onclick="toggleNav()"></button>
+         </div>
+    </div>
+
+
+    <div class="header-lines1">
+        <div></div> <!-- First line -->
+    </div>
 
     <section id="contact">
         <div class="container">
-            <h2>Let's Connect!</h2>
-            <p>Email: <a href="mailto:isabel@example.com">irodriguez49@gatech.edu</a></p>
+            <p>Email: <a href="mailto:isabel@example.com">belbunny17@gatech.edu</a></p>
+            <p>Phone: <a href="tel:+1234567890">+1 (404) 764-7418</a></p>
         </div>
     </section>
 
@@ -73,6 +133,26 @@
             <p>© 2024 Isabel Rodriguez - Reach for the stars!</p>
         </div>
     </footer>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const toggleDarkMode = document.getElementById("toggle-dark-mode");
+            const body = document.body;
+    
+            toggleDarkMode.addEventListener("click", function () {
+                body.classList.toggle("dark-mode");
+    
+                // Toggle between sun and moon icons
+                if (toggleDarkMode.textContent === "✹") {
+                    toggleDarkMode.textContent = "⏾"; // Change to moon
+                    body.setAttribute("data-edition", "NIGHTTIME EDITION"); // Update edition text
+                } else {
+                    toggleDarkMode.textContent = "✹"; // Change to sun
+                    body.setAttribute("data-edition", "DAYTIME EDITION"); // Revert edition text
+                }
+            });
+        });
+    </script>
 </body>
 </html>
 
