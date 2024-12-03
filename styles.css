@@ -33,8 +33,6 @@ header h1 {
 }
 
 
-
-
 header h1::before, header h1::after {
     position: absolute;
     width: 160px;
