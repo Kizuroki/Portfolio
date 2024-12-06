@@ -56,19 +56,13 @@ header h1::before {
     left: -200px; /* Position the box to the left of the name */
 }
 
+/* dark mode version*/
 .dark-mode header h1::before {
     background-color:  rgb(35, 35, 35);
     color: #888992;
     border:  rgb(35, 35, 35);
 }
 
-.dark-mode header h1::after {
-    background-color:  rgb(35, 35, 35);
-    color: #888992;
-    border:  rgb(35, 35, 35);
-}
-
-/* Default edition */
 header h1::after {
     display: flex;
     transform: translateX(-135%);
@@ -76,7 +70,14 @@ header h1::after {
     right: -200px; /* Position the box to the right of the name */
 }
 
-/* Update body attribute for dynamic edition */
+/* dark mode version */
+.dark-mode header h1::after {
+    background-color:  rgb(35, 35, 35);
+    color: #888992;
+    border:  rgb(35, 35, 35);
+}
+
+
 body[data-edition="NIGHTTIME EDITION"] header h1::after {
     content: 'NIGHTTIME EDITION';
 }
@@ -154,9 +155,8 @@ h2 {
 
 
 #about p {
-    
-    margin-right: 20px;       /* Space between the box and the text */
-    background-color: transparent; /* Keep it empty */
+    margin-right: 20px;       
+    background-color: transparent;
     font-family: 'Queens Park';
     text-align: center;
     font-size: 1.45rem;
@@ -328,8 +328,6 @@ h2 {
     background-color: #888992
 }
 
-
-
 .dark-mode .text-box {
     border-color: #888992
 }
@@ -342,6 +340,65 @@ h2 {
     color: #888992
 }
 
+.dark-mode #envelope {
+    cursor: pointer; /* Make sure pointer is shown */
+    width: 300px; /* Adjust width as needed */
+    height: 300px; /* Maintain aspect ratio */
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: opacity 1s; /* Smooth transition for opacity change */
+    border: none;
+    margin-left: 60px;
+    background: url('images/lightclosede.PNG') no-repeat center;
+}
+
+.dark-mode #envelope:hover {
+    background: url('images/lightopene.PNG') no-repeat center;
+    transition: transform 0.3s ease; /* Smooth transition */
+    transform: scale(1.1);
+}
+
+.dark-mode #phone {
+    cursor: pointer; /* Make sure pointer is shown */
+    width: 300px; /* Adjust width as needed */
+    height: 300px; /* Maintain aspect ratio */
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: opacity 1s; /* Smooth transition for opacity change */
+    background: url('images/lightoff.PNG') no-repeat center;
+    border: none;
+    top: 0px;
+    right: 0px;
+    margin-left: 60px;
+}
+
+.dark-mode #phone:hover {
+    background: url('images/lighton.PNG') no-repeat center;
+    transition: transform 0.3s ease; /* Smooth transition */
+    transform: scale(1.1);
+
+}
+
+.dark-mode .project1 {
+    background-color: #888992;
+
+}
+
+.dark-mode .project-image1 {
+    content: url('images/lighteye.PNG');
+}
+.dark-mode .project-image2 {
+    content: url('images/lightcard.PNG');
+}
+.dark-mode .project-image3 {
+    content: url('images/lightartframe.PNG');
+}
+
+
+
+
 
 #projects {
     display: flex; /* Use flexbox for layout */
@@ -352,11 +409,11 @@ h2 {
     color: rgb(35, 35, 35);
 }
 
-#projects .project-image {
+#projects .project-image1, .project-image2, .project-image3 {
     transition: transform 0.3s ease; /* Smooth transition */
 }
 
-#projects .project-image:hover {
+#projects .project-image1:hover, .project-image2:hover, .project-image3:hover {
     transform: scale(1.1); /* Slight zoom-in effect */
 }
 
